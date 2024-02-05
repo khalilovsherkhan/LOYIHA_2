@@ -7,6 +7,6 @@ class Company(models.Model):
     name = models.CharField(max_length=150)
     about = models.CharField(max_length=150)
     logo = models.TextField()
-    id = models.UUIDField(primery_key=True,  default=uuid, editable=False, unique=True)
+    id = models.UUIDField(primary_key = True, default =uuid.uuid4,editable=False,unique=True)
     def __str__(self):
         return self.name
