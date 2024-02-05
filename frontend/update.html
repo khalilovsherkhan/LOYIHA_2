@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="editrecord/{{post.id}}" method="POST"></form>
+    {% csrf_token %}
+    <input type="text" name="name" value="{{post.name}}">
+    <input type="text" name="about" value="{{post.about}}">
+    <input type="text" name="logo" value="{{post.logo}}">
+    <button type="save">Saqlash</button>
+</body>
+
+</html>
